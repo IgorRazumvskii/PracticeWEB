@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+  <title>Document</title>
+
+  <!--шрифт-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!--иконки-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <!--файл со стилями-->
+  <link rel="stylesheet" href="style.css">
+  <!--слайдер-->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <style>
+    html,
+    html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+
+</head>
+
+<body class="body">
+    <header class="header" id="main">
+        <button class="header_logo logo">
+            <a class="header_logo logo" href="#main" style="font-family:'Times New Roman', serif">Главная</a>
+        </button>
+
+        <button class="header_logo logo">
+            <a class="header_logo logo" href="#projects" style="font-family:'Times New Roman', serif">Проекты</a>
+        </button>
+
+        <button class="header_logo logo">
+            <a class="header_logo logo" href="#contacts" style="font-family:'Times New Roman', serif">Контакты</a>
+        </button>
+    </header>
+    <div class="hero">
+        <div class="container hero_container">
+            <div class="hero_about">
+                <h1 class="hero_title" style="font-family:'Times New Roman', serif">
+                    Вэб-разработчик
+                </h1>
+                <h2 class="hero_subtitle" style="font-family:'Comic Sans MS', cursive">
+                    Игорь Разумовский
+                </h2>
+                <p class="hero_description" style="font-family:'Comic Sans MS', cursive">
+                    Привет, я студент университета МТУСИ
+                </p>
+                <div class="hero_links">
+                    <a class="hero_link vk" href="https://vk.com/id276524910" target="_blank">
+                        <i class='bx bxl-vk'></i>
+                    </a>
+                    <a class="hero_link" href="https://github.com/IgorRazumvskii" target="_blank">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a class="hero_link vk" href="https://instagram.com/igor.razumov_sky" target="_blank">
+                        <i class='bx bxl-instagram' ></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero_box">
+                <img src="logo.png", alt="">
+            </div>
+        </div>
+    </div>
+    <div class="projects" id="projects">
+        <h1 style="font-family:'Times New Roman', serif">Проекты</h1>
+        <!--Слайдер-->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img class="image_pr" src="project1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="project2.jpg" alt=""></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+      
+          <!-- Swiper JS -->
+          <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      
+          <!-- Initialize Swiper -->
+          <script>
+            var swiper = new Swiper(".mySwiper", {
+              spaceBetween: 30,
+              centeredSlides: true,
+              autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+              },
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+            });
+          </script>
+        <!--конец слайдера-->
+    </div>
+    <div class="contacts" id="contacts">
+        <h2 style="font-family:'Times New Roman', serif">Контакты</h2>
+        <iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A537ddbf21ce505977b0bcc02ffc943d53fd5ff1b2195504b457bc373ce87f697&amp;source=constructor" width="512" height="300" frameborder="0"></iframe>
+        <div class="contacts_links">
+            <p class="cont" style="font-family:'Comic Sans MS', cursive"><i class='bx bxs-phone-call'></i>  8(901)713-**-**</p>
+            <p class="cont" style="font-family:'Comic Sans MS', cursive"><i class='bx bxs-envelope'></i>  igor_***@list.ru</p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
